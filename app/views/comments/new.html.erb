@@ -1,0 +1,11 @@
+<h1>Add new comment</h1>
+
+<% if @comment.parent %>
+	<!-- want to show the parent comment to reply to here -->
+	<!-- this is my janky version -->
+	<!-- recall, I've called the comment body "comment" in my database, slightly confusing -->
+	<p><%= @comment.parent.comment %></p>
+	<p>Added by <strong><%= @comment.parent.author %></strong> on <%= @comment.parent.created_at %></p>
+<% end %>
+
+<%= render 'comment_form' %>

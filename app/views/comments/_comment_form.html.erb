@@ -1,0 +1,13 @@
+<%= form_for(@comment) do |f| %>
+  
+    <%= f.hidden_field :link_id %>
+    <%= f.hidden_field :parent_id %>
+
+    <%= f.label :author %>
+    <%= f.text_field :author, required: true %>
+
+    <%= f.label :comment %>
+    <%= f.text_area :comment, required: true %>
+ 
+  <%= f.submit %>
+<% end %>

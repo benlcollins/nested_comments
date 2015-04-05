@@ -1,0 +1,10 @@
+<h1><%= @link.title %></h1>
+
+<p><%= @link.body %></p>
+
+<%= comments_tree_for @comments %>
+
+<h3>Join the discussion</h3>
+<p>
+  <%= link_to 'Add new comment', new_comment_path(@link.id) %>
+</p>

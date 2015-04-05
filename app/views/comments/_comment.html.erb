@@ -1,0 +1,7 @@
+<p><%= comment.comment %></p>
+
+<p>Added by <strong><%= comment.author %></strong> on <%= comment.created_at %></p>
+
+<% # binding.pry %>
+
+<p><%= link_to 'reply', new_reply_path(@link.id, comment.id) %></p>

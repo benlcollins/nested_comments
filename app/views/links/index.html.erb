@@ -1,0 +1,6 @@
+<h1>Links page</h1>
+
+<% @links.each do |link| %>
+	<h2><%= link_to link.title, link_path(link) %></h2>
+	<p><%= link_to link.comments.count.to_s + " comments", link_path(link) %></p>
+<% end %>
